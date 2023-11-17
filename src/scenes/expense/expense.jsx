@@ -10,6 +10,9 @@ import {
   Select,
   MenuItem,
   useTheme,
+  Paper,
+  Typography,
+  Grid,
 } from "@mui/material";
 import CurrencyRupeeOutlinedIcon from '@mui/icons-material/CurrencyRupeeOutlined';
 import Header from "../../components/Header";
@@ -33,7 +36,6 @@ const getCurrentDateTime = () => {
   };
 };
 
-
 const ExpenseMonitor = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -41,7 +43,7 @@ const ExpenseMonitor = () => {
   const [isDialogOpen, setDialogOpen] = useState(false);
   const [expenseData, setExpenseData] = useState({
     type: "Expense",
-    date: getCurrentDateTime().date, 
+    date: getCurrentDateTime().date,
     category: "",
     detail: "",
     amount: "",
@@ -70,7 +72,7 @@ const ExpenseMonitor = () => {
     setDialogOpen(false);
     setExpenseData({
       type: "Expense",
-      date: getCurrentDateTime().date, 
+      date: getCurrentDateTime().date,
       category: "",
       detail: "",
       amount: "",
@@ -127,7 +129,6 @@ const ExpenseMonitor = () => {
             cursor: "pointer",
             width: "3%",
             height: "auto",
-            
           }}
         />
         <Button
@@ -144,7 +145,6 @@ const ExpenseMonitor = () => {
         </Button>
       </Box>
 
-      
       <Dialog open={isDialogOpen} onClose={handleDialogClose}>
         <DialogTitle sx={{ backgroundColor: colors.blueAccent[700] }}>Add New Transaction</DialogTitle>
         <DialogContent sx={{ backgroundColor: colors.blueAccent[700] }}>
@@ -202,7 +202,6 @@ const ExpenseMonitor = () => {
             sx={{ marginBottom: "10px", width: "100%" }}
           >
             <MenuItem value="INR">INR (Indian Rupee)</MenuItem>
-           
           </Select>
         </DialogContent>
         <DialogActions sx={{ backgroundColor: colors.blueAccent[700] }}>
@@ -213,24 +212,43 @@ const ExpenseMonitor = () => {
         </DialogActions>
       </Dialog>
 
-
-      {transactionsList.map((transaction, index) => (
-        <Box key={index} sx={{ marginTop: "10px" }}>
-          <Box>
-          <div>Type: {transaction.type}</div>
-            <div>Date: {transaction.date}</div>
-            <div>Category: {transaction.category}</div>
-            <div>Detail: {transaction.detail}</div>
-            <div>Amount: {transaction.amount}</div>
-            <div>Currency: {transaction.currency}</div>
-          </Box>
-        </Box>
-      ))}
+      <Grid container spacing={2}>
+        {transactionsList.map((transaction, index) => (
+          <Grid item key={index} xs={12} md={6}>
+            <Paper
+              sx={{
+                marginTop: "10px",
+                padding: "16px",
+                opacity: 0.9,
+                background: `${colors.primary[400]} !important`, 
+              }}
+            >
+              <Grid container spacing={2}>
+                <Grid item xs={6}>
+                  <Typography variant="h3" sx={{ marginBottom: "6px", fontWeight: "semibold" }}>
+                    {transaction.category}
+                  </Typography>
+                  {transaction.detail && (
+                    <Typography variant="body2" sx={{ marginBottom: "8px" }}>
+                      {transaction.detail}
+                    </Typography>
+                  )}
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="h3" sx={{ marginBottom: "6px", textAlign: "right", fontWeight: "bold" }}>
+                    {`${transaction.amount} ${transaction.currency}`}
+                  </Typography>
+                  <Typography variant="body2" sx={{ textAlign: "right" }}>
+                    {`${transaction.date}`}
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Paper>
+          </Grid>
+        ))}
+      </Grid>
     </Box>
   );
 };
 
 export default ExpenseMonitor;
-
-
-
