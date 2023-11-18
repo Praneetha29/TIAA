@@ -7,7 +7,7 @@ import {
   Grid,
   useTheme
 } from "@mui/material";
-import CurrencyRupeeOutlinedIcon from '@mui/icons-material/CurrencyRupeeOutlined';
+
 import Header from "../../components/Header";
 import { tokens } from "../../theme";
 import Subtitle from "../../components/Subtitle";
