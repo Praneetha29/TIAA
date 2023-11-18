@@ -91,8 +91,8 @@ const ExpenseMonitor = () => {
               color: colors.grey[100],
               fontSize: "14px",
               fontWeight: "bold",
-              padding: "10px 20px",
-              marginRight: "10px",
+              padding: "10px 18px",
+              marginRight: "8px",
             }}
           >
             Total Balance
@@ -220,7 +220,9 @@ const ExpenseMonitor = () => {
                 marginTop: "10px",
                 padding: "16px",
                 opacity: 0.9,
-                background: `${colors.primary[400]} !important`, 
+                background: `${colors.greenAccent[600]} !important`,
+                color: `${colors.grey[100]}` 
+          
               }}
             >
               <Grid container spacing={2}>
