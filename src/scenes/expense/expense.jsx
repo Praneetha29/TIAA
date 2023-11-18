@@ -81,7 +81,7 @@ const ExpenseMonitor = () => {
   };
 
   return (
-    <Box m="20px">
+    <Box m="10px">
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Header title="EXPENSE MONITOR" subtitle="Tracking Finances, Empowering Future" />
         <Box display="flex" alignItems="center">
