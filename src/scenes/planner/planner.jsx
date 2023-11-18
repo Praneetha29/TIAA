@@ -43,7 +43,7 @@ const Planner = () => {
       </Box>
       <Grid container spacing={2}>
         <Grid item xs={3} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }}>
-          <Typography variant="h5">
+          <Typography variant="h6">
             Give us a few details and the income and expenses on a yearly basis to come up with a personalized retirement plan.
           </Typography>
         </Grid>
