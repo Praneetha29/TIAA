@@ -1,70 +1,145 @@
-# Getting Started with Create React App
+# FinWise - Towards a FIRE-Centric Future
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+FinWise is an all-in-one retirement planning solution aimed at promoting Financial Independence, Retire Early (FIRE). Developed by Midatana Sai Praneetha from the National Institute of Technology, Rourkela, this project addresses key pain points in the financial planning process, such as lack of personalized retirement planning, ineffective income optimization, and behavioral finance challenges.
 
-In the project directory, you can run:
+## Pain Points Addressed
 
-### `npm start`
+- Generic Advice: Overcoming the limitations of traditional retirement tools that offer one-size-fits-all advice.
+- Risk Oversight: Addressing the risk tolerance of users for more optimal investment strategies.
+- Budgeting Struggles: Helping users manage their finances better to avoid overspending and under-saving for retirement.
+- Missed Income Opportunities: Identifying ways to enhance income through optimized investments and side gigs.
+- Behavioral Oversights: Incorporating behavioral insights into financial planning.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Solution Approach
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+FinWise leverages advanced technologies to offer:
 
-### `npm test`
+- Personalized financial assessments.
+- Real-time expense tracking with AI-based suggestions.
+- Investment insights and early retirement assessments.
+- Real-time support through an interactive chatbot.
+- Tailored investment strategies incorporating behavioral insights and market updates.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+- Backend authentication, storage, and APIs.
+- Primary language for backend development: [Specify Language]
+- Central database for streamlined database management: [Specify Database]
+- Crafting visually appealing and dynamic user interfaces: [Specify Technologies]
+- Core LLM library for interpreting and producing responses.
+- Data visualizations: [Specify Tools]
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Key Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- In-depth Financial Assessment
+- Real-time Expense Tracking
+- Behavioral Finance Insights
+- Investment Insights
+- Educational Insights
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Future Scope
 
-### `npm run eject`
+- Personalized Investment Alerts
+- Collaborative Planning Hub
+- Automated Tax Optimization
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Business Scope
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Premium Financial Advisory Services
+- Sustainable Investment Portfolio Management Fees
+- Partnerships and Integrations
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Installation & Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### How to Get Started
 
-## Learn More
+Welcome to our React application with a FastAPI backend! Follow these steps to get the application up and running on your local machine.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Prerequisites
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Before you begin, ensure you have the following installed:
 
-### Code Splitting
+- Node.js (which comes with npm)
+- Python (version 3.7 or above)
+- pip
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Additionally, an integrated development environment (IDE) like Visual Studio Code is recommended for a better coding experience.
 
-### Analyzing the Bundle Size
+### Clone the Repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Start by cloning the repository to your local machine:
 
-### Making a Progressive Web App
+```bash
+git clone https://github.com/Praneetha29/TIAA.git
+cd TIAA
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Setting Up the Backend
 
-### Advanced Configuration
+To set up the FastAPI backend:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Navigate to the backend directory:
 
-### Deployment
+    ```bash
+    cd backend
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+2. Create a virtual environment:
 
-### `npm run build` fails to minify
+    ```bash
+    python3 -m venv env
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3. Activate the virtual environment:
+
+   - On Windows:
+
+    ```bash
+    env\Scripts\activate
+    ```
+
+   - On MacOS/Linux:
+
+    ```bash
+    source env/bin/activate
+    ```
+
+4. Install the required Python dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+5. Start the FastAPI server:
+
+    ```bash
+    uvicorn main:app --reload
+    ```
+
+   The `--reload` flag enables automatic reloading of the server upon file changes, which is useful during development.
+
+## Setting Up the Frontend
+
+Once your backend is up and running, let's set up the frontend:
+
+1. Exit the backend directory and go back to the root of the project:
+
+    ```bash
+    cd ..
+    ```
+
+2. Install the node modules required for the React app:
+
+    ```bash
+    npm install
+    ```
+
+3. Start the React development server:
+
+    ```bash
+    npm start
+    ```
+
+Your default web browser should open automatically and navigate to http://localhost:3000, where you can see the React app running.
