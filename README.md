@@ -25,11 +25,11 @@ FinWise leverages advanced technologies to offer:
 ## Tech Stack
 
 - Backend authentication, storage, and APIs.
-- Primary language for backend development: Python-Fastapi
-- Central database for streamlined database management: SQl
-- Crafting visually appealing and dynamic user interfaces: React
+- Primary language for backend development: **__Python-Fastapi__**
+- Central database for streamlined database management: **__SQl__**
+- Crafting visually appealing and dynamic user interfaces: **__React__**
 - Core LLM library for interpreting and producing responses.
-- Data visualizations: Seaborn
+- Data visualizations: **__Seaborn__**
 
 ## Key Features
 
